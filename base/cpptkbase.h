@@ -23,7 +23,6 @@
 #include <sstream>
 #include <vector>
 #include <memory>
-#include <boost/lexical_cast.hpp>
 #include <iosfwd>
 
 namespace Tk
@@ -819,7 +818,11 @@ void deleteLinkVar(std::string &s);
 
 template <typename T>
 inline std::string toString(T const &t)
-{ return boost::lexical_cast<std::string>(t); }
+{
+    std::ostringstream oss;
+    oss << t;
+    return oss.str();
+}
 
 inline std::string toString(std::string const &str) { return str; }
 inline std::string toString(char const *str) { return str; }

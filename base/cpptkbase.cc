@@ -15,7 +15,6 @@
 #include <ostream>
 #include <iostream>
 #include <sstream>
-#include <boost/scoped_ptr.hpp>
 
 using namespace Tk;
 using namespace Tk::details;
